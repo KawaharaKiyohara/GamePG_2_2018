@@ -301,6 +301,10 @@ namespace prefab{
 			return nullptr;
 
 		}
+		/*!
+		* @brief	アニメーションの初期化。
+		*/
+		void InitAnimation(CAnimationClip* animationClips, int numAnimationClips);
 	private:
 		void ForwardRender(CRenderContext& rc) override final;
 		/*!
@@ -330,10 +334,7 @@ namespace prefab{
 			}
 		}
 		
-		/*!
-		* @brief	アニメーションの初期化。
-		*/
-		void InitAnimation(CAnimationClip* animationClips, int numAnimationClips);
+		
 	private:
 		bool						m_isForwardRender = false;		//!<フォワードレンダリング。
 		CAnimationClip*				m_animationClips = nullptr;			//!<アニメーションクリップ。
